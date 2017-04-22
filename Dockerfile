@@ -9,7 +9,7 @@ EXPOSE 8000
 RUN groupadd -r httpuser && useradd -r -g httpuser httpuser
 
 RUN mkdir /webroot
-ADD webroot/ /webroot/
+ADD webfiles/ /webroot/
 RUN chown -R httpuser:httpuser /webroot
 
 WORKDIR /webroot
